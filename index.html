@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>S4 Mods — Call of Duty Vanguard Gratuit</title>
+  <meta name="description" content="Télécharge gratuitement Call of Duty Vanguard avec S4 Mods. Jeu complet, sans coût, prêt à jouer." />
+  <meta name="theme-color" content="#0a0806" />
+  <link rel="icon" type="image/png" href="https://cdn2.steamgriddb.com/icon/a330f9fecc388ce67f87b09855480ca3.png" />
+  <link rel="apple-touch-icon" href="https://cdn2.steamgriddb.com/icon/a330f9fecc388ce67f87b09855480ca3.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="backdrop" aria-hidden="true">
+    <div class="grid"></div>
+    <div class="orb orb-a"></div>
+    <div class="orb orb-b"></div>
+    <div class="orb orb-c"></div>
+    <div class="noise"></div>
+  </div>
+
+  <header class="nav" id="nav">
+    <div class="wrap nav-inner">
+        <a class="brand" href="#accueil" aria-label="S4 Mods, accueil">
+          <span class="brand-mark"><img src="https://cdn2.steamgriddb.com/icon/a330f9fecc388ce67f87b09855480ca3.png" alt="" /></span>
+          <span class="brand-text">S4 <em>MODS</em></span>
+        </a>
+
+        <nav class="nav-links" id="navLinks" aria-label="Navigation principale">
+          <a href="#accueil">Accueil</a>
+          <a href="#fonctionnalites">Avantages</a>
+          <a href="#comment">Installation</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button class="btn btn-ghost nav-login" id="discordLogin" type="button" aria-label="Se connecter avec Discord">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.317 4.37a19.79 19.79 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.865-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.028C.533 9.046-.32 13.58.099 18.058a.082.082 0 0 0 .031.056 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128c.126-.094.252-.192.372-.291a.074.074 0 0 1 .078-.01c3.928 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .079.009c.12.099.246.198.373.292a.077.077 0 0 1-.006.128 12.3 12.3 0 0 1-1.873.891.077.077 0 0 0-.04.107c.36.698.772 1.363 1.225 1.993a.076.076 0 0 0 .084.029 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.055c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.029ZM8.02 15.331c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418Zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418Z"/></svg>
+            <span>Se connecter</span>
+          </button>
+          <div class="nav-user" id="navUser" hidden>
+            <button class="user-btn" id="userBtn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="userMenu">
+              <img class="user-avatar" id="userAvatar" src="" alt="" width="34" height="34" />
+              <span class="user-name" id="userName"></span>
+              <svg class="user-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="user-menu" id="userMenu" hidden>
+              <div class="user-menu-head">
+                <img class="user-avatar user-avatar-lg" id="userAvatarMenu" src="" alt="" width="46" height="46" />
+                <div class="user-meta">
+                  <strong id="userDisplayName"></strong>
+                  <small id="userHandle"></small>
+                </div>
+              </div>
+              <a class="user-menu-link" id="userProfile" href="https://discord.com" target="_blank" rel="noopener noreferrer">Ouvrir mon profil Discord</a>
+              <button class="user-menu-logout" id="logoutBtn" type="button">Se déconnecter</button>
+            </div>
+          </div>
+        <button class="burger" id="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="navLinks">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="accueil">
+      <canvas id="particles" aria-hidden="true"></canvas>
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <span class="badge reveal">
+            <span class="pulse"></span>
+            Call of Duty Vanguard — Gratuit
+          </span>
+          <h1 class="reveal" style="--delay:.06s">
+            Call of Duty<br />
+            <span class="grad">Vanguard Gratuit</span>
+          </h1>
+          <p class="lead reveal" style="--delay:.12s">
+            Téléchargez Call of Duty Vanguard gratuitement via S4 Mods. 
+            Jeu complet, accessible à tous, prêt à jouer.
+          </p>
+          <div class="hero-actions reveal" style="--delay:.18s">
+            <a class="btn btn-primary btn-lg" href="#comment">
+              Installer S4-MODS
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14"/></svg>
+            </a>
+            <button class="btn btn-outline btn-lg" type="button" data-discord-login>
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.317 4.37a19.79 19.79 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.865-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.028C.533 9.046-.32 13.58.099 18.058a.082.082 0 0 0 .031.056 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128c.126-.094.252-.192.372-.291a.074.074 0 0 1 .078-.01c3.928 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .079.009c.12.099.246.198.373.292a.077.077 0 0 1-.006.128 12.3 12.3 0 0 1-1.873.891.077.077 0 0 0-.04.107c.36.698.772 1.363 1.225 1.993a.076.076 0 0 0 .084.029 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.055c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.029ZM8.02 15.331c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418Zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418Z"/></svg>
+              Se connecter avec Discord
+            </button>
+          </div>
+          <ul class="hero-trust reveal" style="--delay:.24s">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>
+              Windows 10 / 11
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>
+              100% Gratuit
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>
+              Jeu complet
+            </li>
+          </ul>
+        </div>
+
+        <div class="hero-visual reveal" style="--delay:.2s">
+          <div class="client-glow" aria-hidden="true"></div>
+          <div class="client-card" id="clientCard">
+            <div class="client-head">
+              <div class="client-id">
+                <span class="client-logo"><img src="https://cdn2.steamgriddb.com/icon/a330f9fecc388ce67f87b09855480ca3.png" alt="" /></span>
+                <div>
+                  <strong>Call of Duty Vanguard</strong>
+                  <small>Gratuit · Complet</small>
+                </div>
+              </div>
+              <span class="status"><i></i>Disponible</span>
+            </div>
+
+            <div class="client-body" style="text-align: center; padding: 40px 20px;">
+              <svg style="width: 80px; height: 80px; margin: 0 auto 20px; color: var(--accent);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              <h3 style="font-size: 20px; margin-bottom: 10px;">Prêt à télécharger</h3>
+              <p style="color: var(--muted); font-size: 14px;">Jeu complet gratuit</p>
+            </div>
+
+            <div class="client-foot">
+              <div>
+                <small>Version</small>
+                <strong>Complète</strong>
+              </div>
+              <div>
+                <small>Taille</small>
+                <strong>~60 GB</strong>
+              </div>
+              <div>
+                <small>Coût</small>
+                <strong class="ok">Gratuit</strong>
+              </div>
+            </div>
+          </div>
+
+          <span class="chip chip-a"><i></i>Gratuit</span>
+          <span class="chip chip-b">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Jeu complet
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="fonctionnalites">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Avantages</span>
+          <h2>Pourquoi télécharger<br /><span class="grad">via S4 Mods ?</span></h2>
+          <p>Un accès simple et rapide pour jouer à Vanguard gratuitement.</p>
+        </div>
+
+        <div class="features">
+          <article class="feature reveal">
+            <span class="icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            </span>
+            <h3>Installation directe &amp; gratuite</h3>
+            <p>Téléchargez et installez Call of Duty Vanguard directement, sans abonnement ni frais cachés.</p>
+            <span class="feature-tag">Direct</span>
+          </article>
+
+          <article class="feature reveal">
+            <span class="icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 9.9-1"/></svg>
+            </span>
+            <h3>Unlock All intégré</h3>
+            <p>Toutes les armes, accessoires et contenus débloqués dès le lancement du jeu.</p>
+            <span class="feature-tag">Tout débloqué</span>
+          </article>
+
+          <article class="feature reveal">
+            <span class="icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </span>
+            <h3>Support Discord à disposition</h3>
+            <p>Une équipe disponible sur Discord pour vous accompagner à chaque étape.</p>
+            <span class="feature-tag">Support</span>
+          </article>
+
+          <article class="feature reveal">
+            <span class="icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5"/></svg>
+            </span>
+            <h3>Installation en torrent ou autre</h3>
+            <p>Choisissez la méthode de téléchargement qui vous convient : torrent ou alternative directe.</p>
+            <span class="feature-tag">Flexible</span>
+          </article>
+
+          <article class="feature reveal">
+            <span class="icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="6" y1="12" x2="10" y2="12"/><line x1="8" y1="10" x2="8" y2="14"/><line x1="15" y1="13" x2="15.01" y2="13"/><line x1="18" y1="11" x2="18.01" y2="11"/><rect x="2" y="6" width="20" height="12" rx="4"/></svg>
+            </span>
+            <h3>Multi-joueur disponible</h3>
+            <p>Retrouvez les modes multijoueur pour affronter d'autres joueurs en ligne.</p>
+            <span class="feature-tag">En ligne</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section steps-section" id="comment">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Installation</span>
+          <h2>Installer <span class="grad">S4-MODS</span> dès maintenant !</h2>
+          <p>Rappel : nous vous conseillons de désactiver l'antivirus avant de commencer l'installation.</p>
+        </div>
+
+        <div class="install-cta reveal">
+          <a class="btn btn-primary btn-lg" href="https://fitgirl-repacks.site/call-of-duty-vanguard/" target="_blank" rel="noopener noreferrer">
+            Installer
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="faq">
+      <div class="wrap faq-wrap">
+        <div class="section-head left reveal">
+          <span class="eyebrow">FAQ</span>
+          <h2>Des questions ?<br /><span class="grad">On a les réponses.</span></h2>
+          <p>Une autre question ? Rejoignez le Discord pour de l'aide.</p>
+        </div>
+
+        <div class="faq reveal">
+          <details>
+            <summary>Le jeu est-il vraiment gratuit ?<span class="plus"></span></summary>
+            <p>Oui, Call of Duty Vanguard est disponible gratuitement via S4 Mods, sans frais ni abonnement.</p>
+          </details>
+          <details>
+            <summary>Quelle configuration est requise ?<span class="plus"></span></summary>
+            <p>Windows 10 ou 11 en 64 bits. Nous recommandons au minimum 8 Go de RAM et une carte graphique compatible DirectX 12.</p>
+          </details>
+          <details>
+            <summary>S4-MODS est-il sans danger ?<span class="plus"></span></summary>
+            <p>S4-MODS est 100% safe et sans danger, vous pouvez le vérifier. Si votre antivirus n'est pas désactivé et qu'il indique que S4-MODS est dangereux, nous rappelons que c'est un crack.</p>
+          </details>
+          <details>
+            <summary>L'installation est-elle compliquée ?<span class="plus"></span></summary>
+            <p>Non, l'installation n'est pas compliquée. Elle peut se compliquer seulement si votre jeu est corrompu. À la fin de l'installation, nous fournissons plusieurs .bat ayant pour objectif de vous aider sur certaines erreurs.</p>
+          </details>
+          <details>
+            <summary>Où obtenir de l'aide ?<span class="plus"></span></summary>
+            <p>Afin d'obtenir de l'aide, rejoignez simplement le serveur Discord afin d'accéder au support.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="wrap">
+        <div class="cta reveal">
+          <span class="eyebrow">Call of Duty Vanguard</span>
+          <h2>Prêt à entrer<br /><span class="grad">sur le champ de bataille ?</span></h2>
+          <p>Téléchargez Call of Duty Vanguard gratuitement dès maintenant.</p>
+          <div class="cta-actions">
+            <a class="btn btn-primary btn-lg" href="#comment">Installer S4-MODS</a>
+            <button class="btn btn-outline btn-lg" type="button" data-discord-login>Se connecter avec Discord</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="#accueil">
+          <span class="brand-mark"><img src="https://cdn2.steamgriddb.com/icon/a330f9fecc388ce67f87b09855480ca3.png" alt="" /></span>
+          <span class="brand-text">S4 <em>MODS</em></span>
+        </a>
+        <p>Téléchargement gratuit de Call of Duty Vanguard.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <a href="#accueil">Accueil</a>
+        <a href="#fonctionnalites">Avantages</a>
+        <a href="#comment">Installation</a>
+        <a href="#faq">FAQ</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Communauté</h4>
+        <a href="#" data-discord-login>Se connecter avec Discord</a>
+        <a href="#" data-toast="Le contenu arrive très bientôt.">YouTube</a>
+        <a href="#" data-toast="Le contenu arrive très bientôt.">TikTok</a>
+        <a href="#" data-toast="Le contenu arrive très bientôt.">Twitter / X</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Légal</h4>
+        <a href="#" data-toast="Page en cours de rédaction.">Conditions d'utilisation</a>
+        <a href="#" data-toast="Page en cours de rédaction.">Confidentialité</a>
+        <a href="#" data-toast="Page en cours de rédaction.">Remboursements</a>
+      </div>
+    </div>
+
+      <div class="wrap footer-bottom">
+        <p>&copy; <span id="year">2026</span> S4 Mods. Tous droits réservés.</p>
+        <p class="disclaimer">S4 Mods n'est pas affilié à Activision Publishing, Inc. ou à Call of Duty.</p>
+      </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="app.js"></script>
+  <script src="discord-config.js"></script>
+  <script src="discord-auth.js"></script>
+</body>
+</html>
