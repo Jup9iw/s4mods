@@ -159,7 +159,7 @@
   let dots = [];
   let raf = 0;
 
-  const palette = ["139, 92, 246", "34, 211, 238", "182, 255, 60"];
+  const palette = ["240, 199, 94", "224, 103, 63", "255, 228, 166"];
 
   const resize = () => {
     const dpr = Math.min(window.devicePixelRatio || 1, 2);
