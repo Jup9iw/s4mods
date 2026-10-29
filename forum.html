@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Forum — S4 Mods</title>
+  <meta name="description" content="Forum privé de la communauté S4 Mods : entraide, réglages et discussions autour de Call of Duty Vanguard." />
+  <meta name="theme-color" content="#07060a" />
+  <link rel="icon" type="image/png" href="https://cdn2.steamgriddb.com/icon/a330f9fecc388ce67f87b09855480ca3.png" />
+  <link rel="apple-touch-icon" href="https://cdn2.steamgriddb.com/icon/a330f9fecc388ce67f87b09855480ca3.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="forum-page" data-requires-auth="true" data-logout-redirect="index.html">
+  <div class="backdrop" aria-hidden="true">
+    <div class="aurora aurora-a"></div>
+    <div class="aurora aurora-b"></div>
+    <div class="aurora aurora-c"></div>
+    <div class="grid"></div>
+    <div class="orb orb-a"></div>
+    <div class="orb orb-b"></div>
+    <div class="orb orb-c"></div>
+    <div class="noise"></div>
+    <div class="vignette"></div>
+  </div>
+
+  <header class="nav" id="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="index.html" aria-label="S4 Mods, accueil">
+        <span class="brand-mark"><img src="https://cdn2.steamgriddb.com/icon/a330f9fecc388ce67f87b09855480ca3.png" alt="" /></span>
+        <span class="brand-text">S4 <em>MODS</em></span>
+      </a>
+
+      <nav class="nav-links" id="navLinks" aria-label="Navigation principale">
+        <a href="index.html">Accueil</a>
+        <a href="index.html#fonctionnalites">Avantages</a>
+        <a href="index.html#galerie">Galerie</a>
+        <a href="index.html#comment">Installation</a>
+        <a href="index.html#faq">FAQ</a>
+        <a class="active" href="forum.html">Forum</a>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="nav-user" id="navUser" hidden>
+          <button class="user-btn" id="userBtn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="userMenu">
+            <img class="user-avatar" id="userAvatar" src="" alt="" width="34" height="34" />
+            <span class="user-name" id="userName"></span>
+            <svg class="user-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="user-menu" id="userMenu" hidden>
+            <div class="user-menu-head">
+              <img class="user-avatar user-avatar-lg" id="userAvatarMenu" src="" alt="" width="46" height="46" />
+              <div class="user-meta">
+                <strong id="userDisplayName"></strong>
+                <small id="userHandle"></small>
+              </div>
+            </div>
+            <a class="user-menu-link" href="index.html">Retour au site</a>
+            <a class="user-menu-link" id="userProfile" href="https://discord.com" target="_blank" rel="noopener noreferrer">Ouvrir mon profil Discord</a>
+            <button class="user-menu-logout" id="logoutBtn" type="button">Se déconnecter</button>
+          </div>
+        </div>
+        <button class="burger" id="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="navLinks">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="forum-main">
+    <section class="forum-hero">
+      <div class="wrap forum-hero-inner">
+        <div>
+          <span class="eyebrow">Espace membres</span>
+          <h1>Le forum <span class="grad">S4 Mods</span></h1>
+          <p>Partage tes réglages, pose tes questions et retrouve l'entraide de la communauté.</p>
+        </div>
+        <div class="forum-user">
+          <img id="forumAvatar" src="" alt="" width="52" height="52" />
+          <div>
+            <small>Connecté en tant que</small>
+            <strong id="forumUserName">…</strong>
+            <span id="forumUserHandle"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="forum-section">
+      <div class="wrap forum-layout">
+        <aside class="forum-side">
+          <div class="forum-panel">
+            <h2>Catégories</h2>
+            <div class="forum-cats" id="forumCats"></div>
+          </div>
+
+          <div class="forum-panel">
+            <h2>Nouveau sujet</h2>
+            <form class="forum-form" id="threadForm">
+              <label>Titre
+                <input id="threadTitle" type="text" maxlength="120" minlength="3" required placeholder="Ex. Meilleur réglage sniper" />
+              </label>
+              <label>Catégorie
+                <select id="threadCategory" required></select>
+              </label>
+              <label>Message
+                <textarea id="threadContent" rows="5" maxlength="4000" required placeholder="Écris ton message…"></textarea>
+              </label>
+              <button class="btn btn-primary btn-block" type="submit">Publier le sujet</button>
+              <p class="forum-form-status" id="threadStatus" role="status"></p>
+            </form>
+          </div>
+        </aside>
+
+        <div class="forum-feed">
+          <div class="forum-feed-head">
+            <h2 id="feedTitle">Derniers sujets</h2>
+            <span class="forum-count" id="threadCount">0 sujet</span>
+          </div>
+          <div class="forum-list" id="threadList" aria-live="polite">
+            <div class="forum-empty">Chargement du forum…</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-bottom">
+      <p>&copy; <span id="year">2026</span> S4 Mods. Tous droits réservés.</p>
+      <p class="disclaimer">S4 Mods n'est pas affilié à Activision Publishing, Inc. ou à Call of Duty.</p>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="app.js"></script>
+  <script src="discord-auth.js"></script>
+  <script src="forum.js"></script>
+</body>
+</html>
